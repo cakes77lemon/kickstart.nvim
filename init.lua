@@ -283,6 +283,9 @@ require('lazy').setup({
 -- Set nvim colorscheme
 vim.cmd("colorscheme kanagawa")
 
+-- Set no confirm
+vim.cmd("set noconfirm")
+
 -- Set highlight on search
 vim.o.hlsearch = true
 vim.o.cursorline = true
@@ -341,6 +344,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Custom shortcuts
 vim.api.nvim_set_keymap('n', '<C-n>', ':Neotree toggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-p>', ':bufdo e!<CR>', { noremap = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
